@@ -1,0 +1,114 @@
+﻿
+/****************************************************************/
+/*Autor: Juan Vidal
+/*Fecha: 07-04-2015
+/*Descripcion: Estilos para la estructura del Master Page
+/***************************************************************/
+
+html, body
+{
+	width: 100%;
+	height: 100%;
+	margin: 0;
+}
+
+#main_div
+{
+	background-image: url('../Images/Back_TruckMining.png');
+	background-position: right bottom;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: auto;
+}
+
+#login_div
+{
+	background-image: url('../Images/Back_Login.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: auto;
+}
+
+.Body_Back
+{
+	background-color: #FCFCFC;
+	background-attachment: scroll;
+	background-image: url('../Images/Back_Image.gif');
+	background-repeat: repeat;
+	background-position: left top;
+}
+
+.Body_Page_Ferreyros
+{
+	background-color: #FFFFFF;
+	margin: 2px auto 0px auto;
+	max-width: 99%;
+	min-width: 99%;
+	float: inherit;
+	border: 1px solid #FFC222;
+}
+
+.Body_Page_Unimaq
+{
+	background-color: #FCFCFC;
+	margin: 2px auto 0px auto;
+	max-width: 99%;
+	min-width: 99%;
+	float: inherit;
+	min-height: 700px;
+	max-height: 700px;
+	border: 1px solid #AB0F13;
+}
+
+.Body_Footer
+{
+	font-family: Verdana;
+	font-size: 11px;
+	color: #1D1D1D;
+	background-color: #FFC222;
+	padding-bottom: 2px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 2px;
+	margin: 0px auto;
+	text-align: center;
+	vertical-align: middle;
+	line-height: normal;
+	width:99%;
+	border: 1px solid #FFC222;
+	
+}
+
+.Body_Header
+{
+	position: relative;
+	margin: 0px;
+	padding: 0px;
+	background: #FCFCFC;
+	width: 100%;
+	top: 0px;
+	left: 0px;
+}
+
+.Body_Main
+{
+	background-color: transparent;
+	padding: 1px 1px;
+	margin: 2px 2px 2px 2px;
+}
+
+
+#center {
+position: absolute;
+top:0;
+left:0;
+right:0;
+bottom:0;
+margin: auto;
+background: red;
+height: 100px;
+width: 100px;
+}
+
+

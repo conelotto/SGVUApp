@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{EC3C51C4-2886-4749-99CD-6B59DAE63DA3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>SGCVU.BL</RootNamespace>
+    <AssemblyName>SGCVU.BL</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>SGCVU.BL.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>SGCVU.BL.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="IBM.Data.DB2.iSeries, Version=12.0.0.0, Culture=neutral, PublicKeyToken=9cdb2ebfb1f93a26, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\SGCVU\dll\IBM.Data.DB2.iSeries.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI">
+      <HintPath>..\SGCVU\Lib\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML">
+      <HintPath>..\SGCVU\Lib\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net">
+      <HintPath>..\SGCVU\Lib\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats">
+      <HintPath>..\SGCVU\Lib\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="clsActividad.vb" />
+    <Compile Include="clsApoyo_Flujo.vb" />
+    <Compile Include="clsApoyo_Maquina.vb" />
+    <Compile Include="clsBeneficio.vb" />
+    <Compile Include="clsConfiguracion_Columnas_Usuario.vb" />
+    <Compile Include="clsContadorCarta.vb" />
+    <Compile Include="clsControlRangoTiempoRDA.vb" />
+    <Compile Include="clsCuentaInventarioMaestro.vb" />
+    <Compile Include="clsCuentaUsuario.vb" />
+    <Compile Include="clsDimCliente.vb" />
+    <Compile Include="clsDireccionPrincipalCliente.vb" />
+    <Compile Include="clsEMPEQPD0_2.vb" />
+    <Compile Include="clsExpediente_DocumentosAdjuntos.vb" />
+    <Compile Include="clsExpediente_Historial.vb" />
+    <Compile Include="clsExpediente_Programas.vb" />
+    <Compile Include="clsFlujo.vb" />
+    <Compile Include="clsExpediente.vb" />
+    <Compile Include="clsIncidenteHist.vb" />
+    <Compile Include="clsLineaVentaMaestro.vb" />
+    <Compile Include="clsLogin.vb" />
+    <Compile Include="clsMaquina.vb" />
+    <Compile Include="clsMaquina_Beneficio.vb" />
+    <Compile Include="clsMaster_Table.vb" />
+    <Compile Include="clsMenu.vb" />
+    <Compile Include="clsProgramas.vb" />
+    <Compile Include="clsReserva.vb" />
+    <Compile Include="clsRoles.vb" />
+    <Compile Include="clsRolFlujos.vb" />
+    <Compile Include="clsSalesRecordCardFecha.vb" />
+    <Compile Include="clsTemp_ZBeneficio.vb" />
+    <Compile Include="clsTemp_ZRda.vb" />
+    <Compile Include="clsTipoFlujo.vb" />
+    <Compile Include="clsUFPFAHD0.vb" />
+    <Compile Include="clsUFPRV010.vb" />
+    <Compile Include="clsUFPRV010_UFPRV110.vb" />
+    <Compile Include="clsUMPBRHD0.vb" />
+    <Compile Include="clsUMPTBAD0.vb" />
+    <Compile Include="clsUsuarios.vb" />
+    <Compile Include="clsUsuariosModulos.vb" />
+    <Compile Include="clsUtil.vb" />
+    <Compile Include="cmpAdministradorMaquinasAsignadas.vb" />
+    <Compile Include="cmpAdministradorZRDA.vb" />
+    <Compile Include="cmpAdministradorZRDATemp.vb" />
+    <Compile Include="cmpAsignarBonoRepuesto.vb" />
+    <Compile Include="cmpAsignarBonoRitmo5.vb" />
+    <Compile Include="cmpCrearExpediente.vb" />
+    <Compile Include="cmpCrearNumeroCarta.vb" />
+    <Compile Include="cmpEnviarCorreo.vb" />
+    <Compile Include="cmpMaquinaInventario.vb" />
+    <Compile Include="cmpReporteExcelInventarioMaquina.vb" />
+    <Compile Include="cmpReserva.vb" />
+    <Compile Include="cmpUsuario.vb" />
+    <Compile Include="Constantes.vb" />
+    <Compile Include="clsAlertas.vb" />
+    <Compile Include="LdapAuthentication.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SGCVU.BE\SGCVU.BE.vbproj">
+      <Project>{7B601446-0A3F-4C6F-813C-9CBB5615BB42}</Project>
+      <Name>SGCVU.BE</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SGCVU.DA\SGCVU.DA.vbproj">
+      <Project>{6219FAF2-30A3-4A39-958E-3C832D0494CD}</Project>
+      <Name>SGCVU.DA</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SGCVU.DTO\SGCVU.DTO.vbproj">
+      <Project>{BE217806-097B-45EC-95AC-BEA05ACB0AA9}</Project>
+      <Name>SGCVU.DTO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SGCVU.EX\SGCVU.EX.vbproj">
+      <Project>{818FFC12-A9B5-4D52-8E51-F06F0576EED5}</Project>
+      <Name>SGCVU.EX</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SGCVU.WS\SGCVU.WS.vbproj">
+      <Project>{FAD9859E-CE60-48C9-90DF-399D963B9740}</Project>
+      <Name>SGCVU.WS</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

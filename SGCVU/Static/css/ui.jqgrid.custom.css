@@ -1,0 +1,29 @@
+﻿/***************************************************************************************/
+/*Estilos de JQGRID*/
+/***************************************************************************************/
+/*Ancho ajustable de las filas*/
+.ui-jqgrid tr.jqgrow td{
+   white-space: pre-wrap; /* CSS3 */
+   white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+   white-space: -pre-wrap; /* Opera 4-6 */
+   white-space: -o-pre-wrap; /* Opera 7 */
+   overflow: hidden;
+   height: auto;
+   vertical-align: middle;
+   padding-top: 3px;
+   padding-bottom: 3px
+}
+/*Ancho ajustable de la cabecera*/
+.ui-jqgrid .ui-jqgrid-htable th div {
+   white-space: pre-wrap; /* CSS3 */
+   white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+   white-space: -pre-wrap; /* Opera 4-6 */
+   white-space: -o-pre-wrap; /* Opera 7 */
+   overflow:hidden;
+   height:auto;
+   padding-right:4px;
+   padding-top:2px;
+   position:relative;
+   vertical-align:text-top;
+}
+/***************************************************************************************/

@@ -1,0 +1,652 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{2CE4247E-9174-4F7E-90BD-D100A202445F}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>SGCVU</RootNamespace>
+    <AssemblyName>SGCVU</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>SGCVU.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>SGCVU.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="itextsharp, Version=4.1.2.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling">
+      <HintPath>..\..\..\Program Files (x86)\Microsoft Enterprise Library 5.0\Bin\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging">
+      <HintPath>..\..\..\Program Files (x86)\Microsoft Enterprise Library 5.0\Bin\Microsoft.Practices.EnterpriseLibrary.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="NPOI, Version=2.0.6.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML, Version=2.0.6.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net, Version=2.0.6.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats, Version=2.0.6.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="Account\ChangePassword.aspx" />
+    <Content Include="Account\ChangePasswordSuccess.aspx" />
+    <Content Include="Account\Login.aspx" />
+    <Content Include="Account\Register.aspx" />
+    <Content Include="app.Administracion\frmAdministracionDefault.aspx" />
+    <Content Include="app.Administracion\frmCuentaInventario.aspx" />
+    <Content Include="app.Administracion\frmLineaVenta.aspx" />
+    <Content Include="app.Administracion\frmTipoFlujo.aspx" />
+    <Content Include="app.Administracion\frmActividadFlujo.aspx" />
+    <Content Include="app.Administracion\frmReserva.aspx" />
+    <Content Include="app.Administracion\frmRolFlujo.aspx" />
+    <Content Include="app.Administracion\frmUsuarioRolFlujo.aspx" />
+    <Content Include="app.Administracion\frmUsuarios.aspx" />
+    <Content Include="app.Administracion\Script\frmCuentaInventario.js" />
+    <Content Include="app.Administracion\Script\frmLineaVenta.js" />
+    <Content Include="app.Administracion\Script\frmUsuarios.js" />
+    <Content Include="app.ApoyoFabricante\frmApoyoFabricante_Programas.aspx" />
+    <Content Include="app.ApoyoFabricante\frmApoyoFabricante_UploadFiles.aspx" />
+    <Content Include="app.ApoyoFabricante\frmApoyoFabricante_workflow.aspx" />
+    <Content Include="app.ApoyoFabricante\Script\frmApoyoFabricante_Programas.js" />
+    <Content Include="app.ApoyoFabricante\Script\frmApoyoFabricante_workflow.js" />
+    <Content Include="app.Bonos\frmGenerarIncidente.aspx" />
+    <Content Include="app.Bonos\frmIncidencia.aspx" />
+    <Content Include="app.Bonos\frmResultado.aspx" />
+    <Content Include="app.Bonos\Scripts\frmGenerarIncidente.js" />
+    <Content Include="app.Bonos\Scripts\frmResultado.js" />
+    <Content Include="app.ReservaUnidades\frmConsultaStock.aspx" />
+    <Content Include="app.ReservaUnidades\frmWorkflow_Configuracion.aspx" />
+    <Content Include="app.ReservaUnidades\frmWorkflow_ReservaUnidades.aspx" />
+    <Content Include="app.ReservaUnidades\Scripts\frmConsultaStock.js" />
+    <Content Include="app.ReservaUnidades\Scripts\frmWorkflow_Configuracion.js" />
+    <Content Include="app.ReservaUnidades\Scripts\frmWorkflow_ReservaUnidades.js" />
+    <Content Include="Images\account.png" />
+    <Content Include="bin\CrystalDecisions.CrystalReports.Engine.dll" />
+    <Content Include="bin\CrystalDecisions.ReportAppServer.CommLayer.dll" />
+    <Content Include="bin\CrystalDecisions.ReportSource.dll" />
+    <Content Include="bin\CrystalDecisions.Shared.dll" />
+    <Content Include="bin\CrystalDecisions.Web.dll" />
+    <Content Include="bin\itextsharp.dll" />
+    <Content Include="Images\add.png" />
+    <Content Include="Images\btnChangePassword.png" />
+    <Content Include="Images\btnDownloadFile_2.png" />
+    <Content Include="Images\btnload.png" />
+    <Content Include="Images\btnUndo_4.png" />
+    <Content Include="Images\Comentario.png" />
+    <Content Include="Images\edit.png" />
+    <Content Include="Images\exclamation.png" />
+    <Content Include="Images\loading-consulta.gif" />
+    <Content Include="Images\roles.gif" />
+    <Content Include="Images\success.png" />
+    <Content Include="Images\anular.png" />
+    <Content Include="Images\alert-error-icon.png" />
+    <Content Include="Images\alert-info-icon.png" />
+    <Content Include="Images\alert-question-icon.png" />
+    <Content Include="Images\alert-warranty-icon.png" />
+    <Content Include="Images\Back_Image.gif" />
+    <Content Include="Images\Back_Login.png" />
+    <Content Include="Images\Back_TruckMining.png" />
+    <Content Include="Images\btnAttached.png" />
+    <Content Include="Images\btnBack.png" />
+    <Content Include="Images\btnCancel.png" />
+    <Content Include="Images\btnClean.png" />
+    <Content Include="Images\btnCloseSession.png" />
+    <Content Include="Images\btnCloseSession_2.png" />
+    <Content Include="Images\btnDownloadFile.png" />
+    <Content Include="Images\btnEdit.png" />
+    <Content Include="Images\btnExport.png" />
+    <Content Include="Images\btnExportExcel.gif" />
+    <Content Include="Images\btnHelp.png" />
+    <Content Include="Images\btnHelp_2.png" />
+    <Content Include="Images\btnHome.png" />
+    <Content Include="Images\btnHome_2.png" />
+    <Content Include="Images\btnItem.png" />
+    <Content Include="Images\btnNew.png" />
+    <Content Include="Images\btnPreview.png" />
+    <Content Include="Images\btnRefresh.png" />
+    <Content Include="Images\btnRefresh_2.png" />
+    <Content Include="Images\btnSave.png" />
+    <Content Include="Images\btnSearch.png" />
+    <Content Include="Images\btnSetting.png" />
+    <Content Include="Images\btnUndo.png" />
+    <Content Include="Images\btnUndo_2.png" />
+    <Content Include="Images\btnUndo_3.png" />
+    <Content Include="Images\btnUnvalidated.png" />
+    <Content Include="Images\btnUploadFile.png" />
+    <Content Include="Images\btnValidate.png" />
+    <Content Include="Images\calendar.png" />
+    <Content Include="Images\delete.png" />
+    <Content Include="Images\editar.png" />
+    <Content Include="Images\error.png" />
+    <Content Include="Images\FCAT_bottom.gif" />
+    <Content Include="Images\f_ico.ico" />
+    <Content Include="Images\icons-sprite-close.png" />
+    <Content Include="Images\icons-sprite-msg.png" />
+    <Content Include="Images\info.png" />
+    <Content Include="Images\loading-small.gif" />
+    <Content Include="Images\loading.gif" />
+    <Content Include="Images\login_panel.png" />
+    <Content Include="Images\Logo-Ferreycorp.gif" />
+    <Content Include="Images\Logo-Ferreyros-mobile.png" />
+    <Content Include="Images\Logo-Ferreyros.png" />
+    <Content Include="Images\mensaje.png" />
+    <Content Include="Images\LogosCorporacion\LogoFerreyrosCat.png" />
+    <Content Include="Images\LogosCorporacion\LogoOrvisa.png" />
+    <Content Include="Images\LogosCorporacion\LogoUnimaq.png" />
+    <Content Include="Images\mod_ApoyoFabricante.png" />
+    <Content Include="Images\mod_Bonos.png" />
+    <Content Include="Images\mod_Configuracion.png" />
+    <Content Include="Images\mod_ReservaUnidades.png" />
+    <Content Include="Images\no-check.png" />
+    <Content Include="Images\ok-check.png" />
+    <Content Include="Images\ProgressBar.GIF" />
+    <Content Include="Images\btnDelete.png" />
+    <Content Include="Images\warning.png" />
+    <Content Include="Lib\Newtonsoft.Json.dll" />
+    <Content Include="Lib\NPOI.dll" />
+    <Content Include="Lib\NPOI.OOXML.dll" />
+    <Content Include="Lib\NPOI.OpenXml4Net.dll" />
+    <Content Include="Lib\NPOI.OpenXmlFormats.dll" />
+    <Content Include="Login.aspx" />
+    <Content Include="Static\css\images\ajax-loader.gif" />
+    <Content Include="Static\css\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Static\css\images\ui-bg_flat_100_F5F5F5_40x100.png" />
+    <Content Include="Static\css\images\ui-bg_flat_100_FFC60F_40x100.png" />
+    <Content Include="Static\css\images\ui-bg_flat_75_FFDD75_40x100.png" />
+    <Content Include="Static\css\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Static\css\images\ui-bg_glass_55_F5F5F5_1x400.png" />
+    <Content Include="Static\css\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Static\css\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Static\css\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Static\css\images\ui-icons_333333_256x240.png" />
+    <Content Include="Static\css\images\ui-icons_454545_256x240.png" />
+    <Content Include="Static\css\images\ui-icons_888888_256x240.png" />
+    <Content Include="Static\css\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Static\css\jquery-ui.css" />
+    <Content Include="Static\css\jquery-ui.theme.css" />
+    <Content Include="Static\css\jquery.mobile-1.4.5.min.css" />
+    <Content Include="Static\css\ui.jqgrid.css" />
+    <Content Include="Static\css\ui.jqgrid.custom.css" />
+    <Content Include="Static\css\uploadfile.css" />
+    <Content Include="Static\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Static\js\i18n\grid.locale-es.js" />
+    <Content Include="Static\js\jquery-1.11.1.min.js" />
+    <Content Include="Static\js\jquery-ui.min.js" />
+    <Content Include="Static\js\jquery.blockUI.js" />
+    <Content Include="Static\js\jquery.contextmenu.js" />
+    <Content Include="Static\js\jquery.fileDownload.js" />
+    <Content Include="Static\js\jquery.jqGrid.min.js" />
+    <Content Include="Static\js\jquery.mobile-1.4.5.min.js" />
+    <Content Include="Static\js\jquery.ui.datepicker-es.js" />
+    <Content Include="Static\js\jquery.uploadfile.js" />
+    <Content Include="Static\js\jquery.validate.min.js" />
+    <Content Include="Static\js\moment.min.js" />
+    <Content Include="Static\js\utils.js" />
+    <Content Include="Styles\Frame.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Styles\Style.css" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.aspx.designer.vb">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="About.aspx.vb">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ChangePassword.aspx.designer.vb">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ChangePassword.aspx.vb">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ChangePasswordSuccess.aspx.designer.vb">
+      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ChangePasswordSuccess.aspx.vb">
+      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Login.aspx.designer.vb">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Login.aspx.vb">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Register.aspx.designer.vb">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Register.aspx.vb">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app.Administracion\frmAdministracionDefault.aspx.designer.vb">
+      <DependentUpon>frmAdministracionDefault.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app.Administracion\frmAdministracionDefault.aspx.vb">
+      <DependentUpon>frmAdministracionDefault.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="app.Administracion\frmCuentaInventario.aspx.designer.vb">
+      <DependentUpon>frmCuentaInventario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app.Administracion\frmCuentaInventario.aspx.vb">
+      <DependentUpon>frmCuentaInventario.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="app.Administracion\frmLineaVenta.aspx.designer.vb">
+      <DependentUpon>frmLineaVenta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app.Administracion\frmLineaVenta.aspx.vb">
+      <DependentUpon>frmLineaVenta.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="app.Administracion\frmTipoFlujo.aspx.designer.vb">
+      <DependentUpon>frmTipoFlujo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app.Administracion\frmTipoFlujo.aspx.vb">
+      <DependentUpon>frmTipoFlujo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app.Administracion\frmUsuarios.aspx.designer.vb">
+      <DependentUpon>frmUsuarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app.Administracion\frmUsuarios.aspx.vb">
+      <DependentUpon>frmUsuarios.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="app.ApoyoFabricante\frmApoyoFabricante_Programas.aspx.designer.vb">
+      <DependentUpon>frmApoyoFabricante_Programas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app.ApoyoFabricante\frmApoyoFabricante_Programas.aspx.vb">
+      <DependentUpon>frmApoyoFabricante_Programas.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="app.ApoyoFabricante\frmApoyoFabricante_UploadFiles.aspx.designer.vb">
+      <DependentUpon>frmApoyoFabricante_UploadFiles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app.ApoyoFabricante\frmApoyoFabricante_UploadFiles.aspx.vb">
+      <DependentUpon>frmApoyoFabricante_UploadFiles.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="app.ApoyoFabricante\frmApoyoFabricante_workflow.aspx.designer.vb">
+      <DependentUpon>frmApoyoFabricante_workflow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app.ApoyoFabricante\frmApoyoFabricante_workflow.aspx.vb">
+      <DependentUpon>frmApoyoFabricante_workflow.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="app.Bonos\frmGenerarIncidente.aspx.designer.vb">
+      <DependentUpon>frmGenerarIncidente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app.Bonos\frmGenerarIncidente.aspx.vb">
+      <DependentUpon>frmGenerarIncidente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app.Bonos\frmIncidencia.aspx.designer.vb">
+      <DependentUpon>frmIncidencia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app.Bonos\frmIncidencia.aspx.vb">
+      <DependentUpon>frmIncidencia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app.Bonos\frmResultado.aspx.designer.vb">
+      <DependentUpon>frmResultado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app.Bonos\frmResultado.aspx.vb">
+      <DependentUpon>frmResultado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app.ReservaUnidades\frmConsultaStock.aspx.designer.vb">
+      <DependentUpon>frmConsultaStock.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app.ReservaUnidades\frmConsultaStock.aspx.vb">
+      <DependentUpon>frmConsultaStock.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="app.ReservaUnidades\frmWorkflow_Configuracion.aspx.designer.vb">
+      <DependentUpon>frmWorkflow_Configuracion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app.ReservaUnidades\frmWorkflow_Configuracion.aspx.vb">
+      <DependentUpon>frmWorkflow_Configuracion.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="app.ReservaUnidades\frmWorkflow_ReservaUnidades.aspx.designer.vb">
+      <DependentUpon>frmWorkflow_ReservaUnidades.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app.ReservaUnidades\frmWorkflow_ReservaUnidades.aspx.vb">
+      <DependentUpon>frmWorkflow_ReservaUnidades.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Carga\CargaBase.ashx.vb">
+      <DependentUpon>CargaBase.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Carga\EliminarArchivo.ashx.vb">
+      <DependentUpon>EliminarArchivo.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet\dtsCarta.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtsCarta.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app.Administracion\frmActividadFlujo.aspx.designer.vb">
+      <DependentUpon>frmActividadFlujo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app.Administracion\frmActividadFlujo.aspx.vb">
+      <DependentUpon>frmActividadFlujo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app.Administracion\frmReserva.aspx.designer.vb">
+      <DependentUpon>frmReserva.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app.Administracion\frmReserva.aspx.vb">
+      <DependentUpon>frmReserva.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app.Administracion\frmRolFlujo.aspx.designer.vb">
+      <DependentUpon>frmRolFlujo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app.Administracion\frmRolFlujo.aspx.vb">
+      <DependentUpon>frmRolFlujo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app.Administracion\frmUsuarioRolFlujo.aspx.designer.vb">
+      <DependentUpon>frmUsuarioRolFlujo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app.Administracion\frmUsuarioRolFlujo.aspx.vb">
+      <DependentUpon>frmUsuarioRolFlujo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Descarga\ApoyoFabricante.ashx.vb">
+      <DependentUpon>ApoyoFabricante.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Descarga\AttachedFiles.ashx.vb">
+      <DependentUpon>AttachedFiles.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Descarga\ExpedienteArchivo.ashx.vb">
+      <DependentUpon>ExpedienteArchivo.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Descarga\MaquinaArchivo.ashx.vb">
+      <DependentUpon>MaquinaArchivo.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Descarga\MaquinasInventario.ashx.vb">
+      <DependentUpon>MaquinasInventario.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Descarga\WashoutFile.ashx.vb">
+      <DependentUpon>WashoutFile.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.vb">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.designer.vb">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.vb">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Site.Master.designer.vb">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.vb">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="app.ApoyoFabricante\Reports\rpt_FlujoApoyo.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="app.ApoyoFabricante\Reports\subrpt_FlujoApoyo.rdlc" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Account\Web.config" />
+    <Content Include="Images\Web.config" />
+    <Content Include="Descarga\MaquinasInventario.ashx" />
+    <Content Include="Descarga\ApoyoFabricante.ashx" />
+    <Content Include="Carga\CargaBase.ashx" />
+    <Content Include="Descarga\WashoutFile.ashx" />
+    <Content Include="Descarga\AttachedFiles.ashx" />
+    <Content Include="Descarga\MaquinaArchivo.ashx" />
+    <Content Include="Carga\EliminarArchivo.ashx" />
+    <None Include="DataSet\dtsCarta.xsc">
+      <DependentUpon>dtsCarta.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\dtsCarta.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtsCarta.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet\dtsCarta.xss">
+      <DependentUpon>dtsCarta.xsd</DependentUpon>
+    </None>
+    <Content Include="Descarga\ExpedienteArchivo.ashx" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="Site.Master" />
+    <Content Include="Styles\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Reports\BonoLeasing.rpt" />
+    <None Include="Reports\CartaBono.rpt" />
+    <None Include="Reports\CartaRitmo5.rpt" />
+    <None Include="Reports\Ritmo5Leasing.rpt" />
+    <None Include="Reports\Unidades.rpt" />
+    <None Include="Reports\UnidadesRitmo5.rpt" />
+    <None Include="Static\fonts\glyphicons-halflings-regular.eot" />
+    <None Include="Static\fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="Static\fonts\glyphicons-halflings-regular.woff" />
+    <None Include="Static\fonts\glyphicons-halflings-regular.woff2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="app.Bonos\Cartas\" />
+    <Folder Include="app.Bonos\Descargas\" />
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SGCVU.BE\SGCVU.BE.vbproj">
+      <Project>{7B601446-0A3F-4C6F-813C-9CBB5615BB42}</Project>
+      <Name>SGCVU.BE</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SGCVU.BL\SGCVU.BL.vbproj">
+      <Project>{EC3C51C4-2886-4749-99CD-6B59DAE63DA3}</Project>
+      <Name>SGCVU.BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SGCVU.DTO\SGCVU.DTO.vbproj">
+      <Project>{BE217806-097B-45EC-95AC-BEA05ACB0AA9}</Project>
+      <Name>SGCVU.DTO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SGCVU.EX\SGCVU.EX.vbproj">
+      <Project>{818FFC12-A9B5-4D52-8E51-F06F0576EED5}</Project>
+      <Name>SGCVU.EX</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SGCVU.WS\SGCVU.WS.vbproj">
+      <Project>{FAD9859E-CE60-48C9-90DF-399D963B9740}</Project>
+      <Name>SGCVU.WS</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>38115</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
